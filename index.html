@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script src="assets/js/database.js"> </script>
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>SKKU-SHOP</title>
+    </head>
+    <body>
+
+        <!--===== HEADER =====-->
+        <header class="header" id="header">
+            <nav class="nav grid">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bxs-grid'></i>
+                </div>
+
+                <a href="#" class="nav__logo">SKKU SHOP</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#Varsity_jacket" class="nav__link">Varsity jacket</a></li>
+                        <li class="nav__item"><a href="#padded_coat" class="nav__link">Padded coat</a></li>
+                        <li class="nav__item"><a href="#t-shirt" class="nav__link">T-shirt</a></li>
+                        <li class="nav__item"><a href="./All_Products.html" class="nav__link">All Products</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__shop">
+                    <a href="./buy.html" class="nav__link"><i class='bx bx-shopping-bag' ></i></a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container grid">
+                    <div class="home__product">
+                        <div class="home__shape"></div>
+                        <img src="assets/img/imghome.png" alt="" class="home__img">
+                    </div>
+
+                    <div class="home__data">
+                        <span class="home__t-shirt">Best item</span>
+                        <h1 class="home__title">Basic Varsity jacket <br>60.99$</h1>
+                        <p class="home__description">Explore the specific information about this jacket</p>
+
+                        <a href="#t-shirt" class="button">Explore</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== varsity jacket =====-->
+            <section class="Varsity_jacket section" id="Varsity_jacket">
+                <h2 class="section-title">Varsity jacket</h2>
+
+                <div class="Varsity_jacket__container grid">
+                    <article class="product">
+                        <div class="product__sale">Sale</div>
+                        <img src="assets/img/varsity_jacket1.png" alt="" class="product__img">
+                        <span class="product__name">Basic Varsity jacket</span>
+                        <span class="product__preci">$60.99</span>
+                        <a class="button-light" onclick="addItem('Basic Varsity jacket')">Add to Cart<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+
+                    <article class="product">
+                        <div class="product__sale">Sale</div>
+                        <img src="assets/img/varsity_jacket2.png" alt="" class="product__img">
+                        <span class="product__name">Green Varsity jacket</span>
+                        <span class="product__preci">$64.99</span>
+                        <a class="button-light" onclick="addItem('Green Varsity jacket')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+
+                    <article class="product">
+                        <div class="product__sale">Sale</div>
+                        <img src="assets/img/varsity_jacket3.png" alt="" class="product__img">
+                        <span class="product__name">Black Varsity jacket</span>
+                        <span class="product__preci">69.99</span>
+                        <a class="button-light" onclick="addItem('Black Varsity jacket')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+                </div>
+            </section>
+
+            <!--===== COLLECTION =====-->
+            <section class="collection section">
+                <div class="collection__container grid">
+                    <div class="collection__card">
+                        <div class="collection__data">
+                            <h3 class="collection__name">Special</h3>
+                            <p class="collection__description">limited edtion</p>
+                            <a class="button-light" onclick="addItem('Special Varsity jacket')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                        </div>
+
+                        <img src="assets/img/Varity_jacket1.png" alt="" class="collection__img">
+                    </div>
+
+                    <div class="collection__card">
+                        <div class="collection__data">
+                            <h3 class="collection__name">Basic</h3>
+                            <p class="collection__description">It's in sale</p>
+                            <a class="button-light" onclick="addItem('Basic Varsity jacket')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                        </div>
+
+                        <img src="assets/img/Varity_jacket2.png" alt="" class="collection__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== padded_coat SNEAKERS =====-->
+            <section class="padded_coat section" id="padded_coat">
+                <h2 class="section-title">Padded coat</h2>
+
+                <div class="padded_coat__container grid">
+                    <article class="product">
+                        <img src="assets/img/Padded_coat1.png" alt="" class="product__img">
+                        <span class="product__name">Basic</span>
+                        <span class="product__preci">$129.90</span>
+                        <a class="button-light" onclick="addItem('Basic padded coat')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+
+                    <article class="product">
+                        <img src="assets/img/Padded_coat2.png" alt="" class="product__img">
+                        <span class="product__name">White</span>
+                        <span class="product__preci">$119.90</span>
+                        <a class="button-light" onclick="addItem('White padded coat')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+                    
+                    <article class="product">
+                        <img src="assets/img/Padded_coat3.png" alt="" class="product__img">
+                        <span class="product__name">Special</span>
+                        <span class="product__preci">$139.90</span>
+                        <a class="button-light" onclick="addItem('Specail padded coat')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+
+                    <article class="product">
+                        <img src="assets/img/Padded_coat4.png" alt="" class="product__img">
+                        <span class="product__name">Simple</span>
+                        <span class="product__preci">$129.90</span>
+                        <a class="button-light" onclick="addItem('Simple padded coat')">Add to Cart <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+                </div>
+            </section>
+
+            <!--===== OFFER =====-->
+            <section class="offer section">
+                <div class="offer__container grid">
+                    <div class="offer__data">
+                        <h3 class="offer__title">Official SKKU SHOP</h3>
+                        <p class="offer__description">with variable items</p>
+                        <a href="#" class="button">Shop Now</a>
+                    </div>
+
+                    <img src="assets/img/logo.png" alt="" class="offer__img">
+                </div>
+            </section>
+
+            <!--===== t-shirt COLLECTION =====-->
+            <section class="t-shirt section" id="t-shirt">
+                <h2 class="section-title">T-shirt</h2>
+
+                <div class="t-shirt__container grid">
+                    <div class="t-shirt__mens">
+                        <img src="assets/img/Tshirt1.png" alt="" class="t-shirt__mens-img">
+                        <h3 class="t-shirt__title">Basic T-shirt</h3>
+                        <span class="t-shirt__preci">Start from $30.99</span>
+                        <a href="#" class="button-light">See another<i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </div>
+
+                    <div class="t-shirt__product">
+                        <div class="t-shirt__product-card">
+                            <img src="assets/img/Tshirt2.png" alt="" class="t-shirt__product-img">
+                            <div class="t-shirt__product-overlay">
+                                <a class="button" onclick="addItem('Simple SKKU T-shirt')">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="t-shirt__product-card">
+                            <img src="assets/img/Tshirt3.png" alt="" class="t-shirt__product-img">
+                            <div class="t-shirt__product-overlay">
+                                <a class="button" onclick="addItem('Simple SKKU black T-shirt')">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="t-shirt__product-card">
+                            <img src="assets/img/Tshirt4.png" alt="" class="t-shirt__product-img">
+                            <div class="t-shirt__product-overlay">
+                                <a class="button" onclick="addItem('White SKKU T-shirt')">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="t-shirt__product-card">
+                            <img src="assets/img/Tshirt5.png" alt="" class="t-shirt__product-img">
+                            <div class="t-shirt__product-overlay">
+                                <a class="button" onclick="addItem('Grey SKKU T-shirt')">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== t-shirtSLETTER =====-->
+            <section class="t-shirtsletter section">
+                <div class="t-shirtsletter__container grid">
+                    <div>
+                        <h3 class="t-shirtsletter__title">Join the event and Get <br> 10% OFF</h3>
+                        <p class="t-shirtsletter__description">Get 10% discount for all products</p>
+                    </div>
+
+                    <form action="" class="t-shirtsletter__subscribe">
+                        <input type="text" id=EMAIL placeholder="@email.com" class="t-shirtsletter__input">
+                        <a onclick="join_event()" class="button">Join</a>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container grid">
+                <div class="footer__box">
+                    <h3 class="footer__title">SKKU SHOP</h3>
+                    <p class="footer__description">Items of SKKU collection 2022.</p>
+                </div>
+
+                <div class="footer__box">
+                    <h3 class="footer__title">EXPLORE</h3>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#Varsity_jacket" class="footer__link">Varsity jacket</a></li>
+                        <li><a href="#padded_coat" class="footer__link">Padded coat</a></li>
+                        <li><a href="#t-shirt" class="footer__link">T-shirt</a></li>
+                    </ul>                  
+                </div>
+
+                <div class="footer__box">
+                    <h3 class="footer__title">SUPPORT</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Product Help</a></li>
+                        <li><a href="#" class="footer__link">Customer Care</a></li>
+                        <li><a href="#" class="footer__link">Athorized service</a></li>
+                    </ul>                  
+                </div>
+            </div>
+            <p class="footer__copy">&#169; 2022 SKKU Byeon JiHwan. All right reserved</p>
+        </footer>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
